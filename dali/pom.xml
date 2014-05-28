@@ -240,7 +240,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>${version.surefire.plugin}</version>
                         <configuration>
-                            <skip>true</skip>
+                            <skip>false</skip>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -296,6 +296,17 @@
                             <warName>ROOT</warName>
                         </configuration>
                     </plugin>
+                     <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${version.jboss.maven.plugin}</version>
+                <configuration>
+			        <hostname>127.0.0.1</hostname>
+			        <username>dali</username>
+			        <password>root</password>
+			        <port>9999</port>
+		        </configuration>
+            </plugin>
                 </plugins>
             </build>
         </profile>
